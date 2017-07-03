@@ -49,10 +49,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RequestLoginMessage.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RequestLoginMessage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ir/aut/test/logic/RequestLoginMessage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1431">
+            <state relative-caret-position="1507">
               <caret line="62" column="25" lean-forward="false" selection-start-line="62" selection-start-column="25" selection-end-line="62" selection-end-column="25" />
               <folding>
                 <element signature="e#500#540#1" expanded="true" />
@@ -83,6 +83,18 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="TcpChannel.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ir/aut/test/logic/TcpChannel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="924">
+              <caret line="28" column="8" lean-forward="false" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -103,6 +115,8 @@
         <option value="$PROJECT_DIR$/src/ir/aut/test/logic/BaseMessage.java" />
         <option value="$PROJECT_DIR$/src/ir/aut/test/logic/MessageTypes.java" />
         <option value="$PROJECT_DIR$/src/ir/aut/test/logic/RequestLoginMessage.java" />
+        <option value="$PROJECT_DIR$/src/ir/aut/test/logic/TopChannel.java" />
+        <option value="$PROJECT_DIR$/src/ir/aut/test/logic/TcpChannel.java" />
       </list>
     </option>
   </component>
@@ -579,12 +593,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1499074641583</updated>
-      <workItem from="1499074645166" duration="2828000" />
+      <workItem from="1499074645166" duration="4053000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2828000" />
+    <option name="totallyTimeSpent" value="4053000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-16" y="-16" width="3872" height="2116" extended-state="6" />
@@ -660,7 +674,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ir/aut/test/logic/RequestLoginMessage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1431">
+        <state relative-caret-position="1507">
           <caret line="62" column="25" lean-forward="false" selection-start-line="62" selection-start-column="25" selection-end-line="62" selection-end-column="25" />
           <folding>
             <element signature="e#500#540#1" expanded="true" />
@@ -686,6 +700,16 @@
             <element signature="e#1924#1925#0" expanded="true" />
             <element signature="e#1959#1960#0" expanded="true" />
             <element signature="e#1991#1992#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ir/aut/test/logic/TcpChannel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="924">
+          <caret line="28" column="8" lean-forward="false" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
