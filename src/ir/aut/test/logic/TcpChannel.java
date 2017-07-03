@@ -10,23 +10,29 @@ public class TcpChannel {
     private Socket mSocket;
     private OutputStream mOutputStream;
     private InputStream mInputStream;
-    public TcpChannel(SocketAddress socketAddress, int timeout){
+
+    public TcpChannel(SocketAddress socketAddress, int timeout) {
 
     }
-    public TcpChannel(Socket socket,int timeout){
+
+    public TcpChannel(Socket socket, int timeout) {
 
     }
-    public byte[] read(final int count){
+
+    public byte[] read(final int count) {
 
     }
-    public void write(byte[] data){
+
+    public void write(byte[] data) {
 
     }
-    public boolean isConnected(){
+
+    public boolean isConnected() {
 
     }
-    public void closeChannel(){
-        
+
+    public void closeChannel() {
+
     }
 
 }
