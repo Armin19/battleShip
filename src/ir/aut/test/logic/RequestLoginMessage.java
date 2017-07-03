@@ -33,4 +33,33 @@ public class RequestLoginMessage extends BaseMessage {
         byteBuffer.put(mPassword.getBytes());
         mSerialized = byteBuffer.array();
     }
+
+    @Override
+    protected void deserialize() {
+        ByteBuffer byteBuffer = ByteBuffer.wrap(mSerialized);
+        int messageLength = byteBuffer.getInt();
+        byte protocolVersion = byteBuffer.get();
+        byte messageType = byteBuffer.get();
+        int usernameLength = byteBuffer.getInt();
+        byte[] usernameBytes = new byte[usernameLength];
+        byteBuffer.get(usernameBytes);
+        mUsername = new String(usernameBytes);
+        int passwordLength = byteBuffer.getInt();
+        byte[] passwordBytes = new byte[passwordLength];
+        byteBuffer.get(passwordBytes);
+        mPassword = new String(passwordBytes);
+    }
+
+    @Override
+    public byte getMessageType() {
+        return MessageTypes.REQUEST_LOGIN;
+    }
+
+    public String getUsername() {
+        return mUsername;
+    }
+
+    public String getPassword() {
+        return mPassword;
+    }
 }

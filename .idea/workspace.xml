@@ -52,8 +52,8 @@
       <file leaf-file-name="RequestLoginMessage.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ir/aut/test/logic/RequestLoginMessage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1089">
-              <caret line="33" column="41" lean-forward="false" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
+            <state relative-caret-position="1431">
+              <caret line="62" column="25" lean-forward="false" selection-start-line="62" selection-start-column="25" selection-end-line="62" selection-end-column="25" />
               <folding>
                 <element signature="e#500#540#1" expanded="true" />
                 <element signature="e#549#589#1" expanded="true" />
@@ -61,6 +61,23 @@
                 <element signature="e#679#738#1" expanded="true" />
                 <element signature="e#953#973#0" expanded="true" />
                 <element signature="e#1042#1062#0" expanded="true" />
+                <element signature="e#1171#1224#1" expanded="true" />
+                <element signature="e#1233#1273#1" expanded="true" />
+                <element signature="e#1253#1272#0" expanded="true" />
+                <element signature="e#1282#1322#1" expanded="true" />
+                <element signature="e#1331#1367#1" expanded="true" />
+                <element signature="e#1376#1417#1" expanded="true" />
+                <element signature="e#1397#1416#0" expanded="true" />
+                <element signature="e#1426#1474#1" expanded="true" />
+                <element signature="e#1569#1610#1" expanded="true" />
+                <element signature="e#1590#1609#0" expanded="true" />
+                <element signature="e#1619#1667#1" expanded="true" />
+                <element signature="e#1808#1809#0" expanded="true" />
+                <element signature="e#1857#1858#0" expanded="true" />
+                <element signature="e#1892#1893#0" expanded="true" />
+                <element signature="e#1924#1925#0" expanded="true" />
+                <element signature="e#1959#1960#0" expanded="true" />
+                <element signature="e#1991#1992#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -562,15 +579,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1499074641583</updated>
-      <workItem from="1499074645166" duration="1544000" />
+      <workItem from="1499074645166" duration="2828000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1544000" />
+    <option name="totallyTimeSpent" value="2828000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-16" y="-16" width="3872" height="2116" extended-state="7" />
+    <frame x="-16" y="-16" width="3872" height="2116" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -622,6 +639,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ir/aut/test/logic/MessageTypes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="5" column="47" lean-forward="false" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ir/aut/test/logic/BaseMessage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="429">
@@ -633,18 +658,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ir/aut/test/logic/MessageTypes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="5" column="47" lean-forward="false" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ir/aut/test/logic/RequestLoginMessage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1089">
-          <caret line="33" column="41" lean-forward="false" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
+        <state relative-caret-position="1431">
+          <caret line="62" column="25" lean-forward="false" selection-start-line="62" selection-start-column="25" selection-end-line="62" selection-end-column="25" />
           <folding>
             <element signature="e#500#540#1" expanded="true" />
             <element signature="e#549#589#1" expanded="true" />
@@ -652,6 +669,23 @@
             <element signature="e#679#738#1" expanded="true" />
             <element signature="e#953#973#0" expanded="true" />
             <element signature="e#1042#1062#0" expanded="true" />
+            <element signature="e#1171#1224#1" expanded="true" />
+            <element signature="e#1233#1273#1" expanded="true" />
+            <element signature="e#1253#1272#0" expanded="true" />
+            <element signature="e#1282#1322#1" expanded="true" />
+            <element signature="e#1331#1367#1" expanded="true" />
+            <element signature="e#1376#1417#1" expanded="true" />
+            <element signature="e#1397#1416#0" expanded="true" />
+            <element signature="e#1426#1474#1" expanded="true" />
+            <element signature="e#1569#1610#1" expanded="true" />
+            <element signature="e#1590#1609#0" expanded="true" />
+            <element signature="e#1619#1667#1" expanded="true" />
+            <element signature="e#1808#1809#0" expanded="true" />
+            <element signature="e#1857#1858#0" expanded="true" />
+            <element signature="e#1892#1893#0" expanded="true" />
+            <element signature="e#1924#1925#0" expanded="true" />
+            <element signature="e#1959#1960#0" expanded="true" />
+            <element signature="e#1991#1992#0" expanded="true" />
           </folding>
         </state>
       </provider>
