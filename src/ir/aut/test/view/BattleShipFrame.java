@@ -612,4 +612,213 @@ public class BattleShipFrame extends JFrame {
         }
     }
 
+    //Listener for Rules menu
+    private class RulesListener implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+
+        }
+    }
+
+    //Listener for ok button in statistics menu
+    private class OkListener implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+            statistics.dispose();
+        }
+    }
+
+    //Listener for Stats menu
+    private class StatsListener implements ActionListener {
+        //
+        public void setup() {
+            stats = new JPanel();
+            ok.addActionListener(new OkListener());
+            statistics.setSize(300, 300);
+            statistics.setResizable(false);
+            statistics.getContentPane().add(ok, BorderLayout.SOUTH);
+            //statistics.setLocation(700,200);
+        }
+
+        public void actionPerformed(ActionEvent e) {
+            if (data == null)
+                setup();
+            else
+                stats.removeAll();
+            stats.setLayout(new GridLayout(6, 3));
+            data = new JLabel("");
+            stats.add(data);
+            data = new JLabel("Player 1", SwingConstants.CENTER);
+            stats.add(data);
+            data = new JLabel("Player 2", SwingConstants.CENTER);
+            stats.add(data);
+            data = new JLabel("Names");
+            stats.add(data);
+            if (you == 0) {
+                data = new JLabel(players[you].getUser(), SwingConstants.CENTER);
+                stats.add(data);
+                data = new JLabel(players[enemy].getUser(), SwingConstants.CENTER);
+                stats.add(data);
+                data = new JLabel("Shots Taken");
+                stats.add(data);
+                data = new JLabel(Integer.toString(players[you].getShots()), SwingConstants.CENTER);
+                stats.add(data);
+                data = new JLabel(Integer.toString(players[enemy].getShots()), SwingConstants.CENTER);
+                stats.add(data);
+                data = new JLabel("Hits");
+                stats.add(data);
+                data = new JLabel(Integer.toString(players[you].getHits()), SwingConstants.CENTER);
+                stats.add(data);
+                data = new JLabel(Integer.toString(players[enemy].getHits()), SwingConstants.CENTER);
+                stats.add(data);
+                data = new JLabel("Shot Accuracy");
+                stats.add(data);
+                data = new JLabel(players[you].getAcc(), SwingConstants.CENTER);
+                stats.add(data);
+                data = new JLabel(players[enemy].getAcc(), SwingConstants.CENTER);
+                stats.add(data);
+                data = new JLabel("Ships Left");
+                stats.add(data);
+                data = new JLabel(Integer.toString(players[you].getShipsLeft()), SwingConstants.CENTER);
+                stats.add(data);
+                data = new JLabel(Integer.toString(players[enemy].getShipsLeft()), SwingConstants.CENTER);
+                stats.add(data);
+            } else {
+                data = new JLabel(players[enemy].getUser(), SwingConstants.CENTER);
+                stats.add(data);
+                data = new JLabel(players[you].getUser(), SwingConstants.CENTER);
+                stats.add(data);
+                data = new JLabel("Shots Taken");
+                stats.add(data);
+                data = new JLabel(Integer.toString(players[enemy].getShots()), SwingConstants.CENTER);
+                stats.add(data);
+                data = new JLabel(Integer.toString(players[you].getShots()), SwingConstants.CENTER);
+                stats.add(data);
+                data = new JLabel("Hits");
+                stats.add(data);
+                data = new JLabel(Integer.toString(players[enemy].getHits()), SwingConstants.CENTER);
+                stats.add(data);
+                data = new JLabel(Integer.toString(players[you].getHits()), SwingConstants.CENTER);
+                stats.add(data);
+                data = new JLabel("Shot Accuracy");
+                stats.add(data);
+                data = new JLabel(players[enemy].getAcc(), SwingConstants.CENTER);
+                stats.add(data);
+                data = new JLabel(players[you].getAcc(), SwingConstants.CENTER);
+                stats.add(data);
+                data = new JLabel("Ships Left");
+                stats.add(data);
+                data = new JLabel(Integer.toString(players[enemy].getShipsLeft()), SwingConstants.CENTER);
+                stats.add(data);
+                data = new JLabel(Integer.toString(players[you].getShipsLeft()), SwingConstants.CENTER);
+                stats.add(data);
+            }
+            statistics.getContentPane().add(stats);
+            statistics.pack();
+            statistics.setVisible(true);
+        }
+    }
+
+    //Listener for Deploy Button
+    private class DeployListener implements ActionListener {
+        public void actionPerformed(ActionEvent v) {
+            int r = JOptionPane.showConfirmDialog(null, "Are you sure you would l"
+                            + "ike to deploy your ships?", "Deploy Ships?",
+                    JOptionPane.YES_NO_OPTION);
+            if (r == 0) {
+                w = 0;
+                a = 0;
+                s = 0;
+                t = 0;
+                e = 0;
+                d.remove(input);
+                b.add(players[you].getMyBoard(), BorderLayout.WEST);
+                ready = 1;
+                c.add(autoBoard(enemy, you), BorderLayout.EAST);
+                d.add(new JPanel(), BorderLayout.CENTER);
+                if (!selectedValue.equals("Online"))
+                    whoGoesFirst();
+                pack();
+                repaint();
+            }
+        }
+    }
+
+    //Listener for Options menu
+    public class OptionsListener implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+            if (opts == null)
+                setup();
+            else
+                options.setVisible(true);
+        }
+
+        public void setup() {
+            opts = new JPanel(new GridLayout(4, 2));
+            title = new JLabel("Computer AI");
+            opts.add(title);
+            aiLevel.setSelectedIndex(0);
+            opts.add(aiLevel);
+            title = new JLabel("Ship Layout");
+            opts.add(title);
+            shipLayout.setSelectedIndex(0);
+            opts.add(shipLayout);
+            title = new JLabel("Ship Color");
+            opts.add(title);
+            shipColor.addActionListener(new SColorListener());
+            shipColor.setSelectedIndex(0);
+            opts.add(shipColor);
+            title = new JLabel("Who Plays First?");
+            opts.add(title);
+            playsFirst.setSelectedIndex(0);
+            opts.add(playsFirst);
+            options.getContentPane().add(opts, BorderLayout.CENTER);
+            //options.setSize(600,800);
+            options.setResizable(false);
+            done.addActionListener(new DoneListener());
+            options.getContentPane().add(done, BorderLayout.SOUTH);
+            options.setLocation(200, 200);
+            options.pack();
+            options.setVisible(true);
+        }
+
+        //Listener for the Colors combo box
+        private class SColorListener implements ActionListener {
+            public void actionPerformed(ActionEvent v) {
+                for (i = 0; i < 10; i++)
+                    for (j = 0; j < 10; j++) {
+                        if (players[you].getBboard(i, j).getBackground() == color[prevcolor])
+                            players[you].setBboard(i, j, color[shipColor.getSelectedIndex()]);
+                        if (players[enemy].getBboard(i, j).getBackground()
+                                == color[prevcolor])
+                            players[enemy].setBboard(i, j, color[shipColor.getSelectedIndex()]);
+                    }
+                prevcolor = shipColor.getSelectedIndex();
+            }
+        }
+
+        //Listener for ok button in statistics menu
+        private class DoneListener implements ActionListener {
+            public void actionPerformed(ActionEvent e) {
+                if ((shipLayout.getSelectedIndex() != prevLayout) ||
+                        (aiLevel.getSelectedIndex() != prevLevel) ||
+                        (playsFirst.getSelectedIndex() != prevFirst)) {
+                    JOptionPane.showMessageDialog(null, "Changes will take" +
+                                    " place at the start of a new game.", ""
+                            , JOptionPane.PLAIN_MESSAGE);
+                    if (shipLayout.getSelectedIndex() != prevLayout)
+                        prevLayout = shipLayout.getSelectedIndex();
+                    if (playsFirst.getSelectedIndex() != prevFirst)
+                        prevFirst = playsFirst.getSelectedIndex();
+                    if (aiLevel.getSelectedIndex() != prevLevel)
+                        prevLevel = aiLevel.getSelectedIndex();
+                }
+                options.dispose();
+            }
+        }
+    }
+    public static BattleshipClient getClient()
+    {
+        return me;
+    }
+
+
 }
