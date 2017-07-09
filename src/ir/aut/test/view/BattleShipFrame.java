@@ -14,7 +14,9 @@ public class BattleShipFrame extends JFrame {
     private static JFrame statistics = new JFrame("Statistics"), options = new JFrame("Options");
     private static JLabel data, title;
     private static JPanel stats = new JPanel(), opts, inputpanel;
-    private static Container b, c, d;
+    public static Container b;
+    public static Container c;
+    public static Container d;
     private JPanel input;
     private static JMenuItem m, pvp, pvc, cvc;
     private static String[] cletters = {" ", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J"};
@@ -32,7 +34,18 @@ public class BattleShipFrame extends JFrame {
     private static JComboBox shipColor = new JComboBox(colors);
     private JComboBox playsFirst = new JComboBox(first);
     private JTextField mbar = new JTextField();
-    private static int enemy = 1, i, j, length = 5, you = 0, prevcolor = 0, prevFirst = 0, prevLayout = 0, prevLevel = 0, ready = 0, sindex = 0, dindex = 0;
+    public static int enemy = 1;
+    private static int i;
+    private static int j;
+    private static int length = 5;
+    private static int you = 0;
+    private static int prevcolor = 0;
+    private static int prevFirst = 0;
+    private static int prevLayout = 0;
+    private static int prevLevel = 0;
+    private static int ready = 0;
+    private static int sindex = 0;
+    private static int dindex = 0;
     private static Player players[] = new Player[2];
     private static JButton deploy = new JButton("DEPLOY");
     private static int w = 0, a = 0, s = 0, t = 0, e = 0;//counters to track the use of all ships
