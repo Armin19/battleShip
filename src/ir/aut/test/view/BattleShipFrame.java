@@ -1,6 +1,8 @@
 package ir.aut.test.view;
 
 
+import ir.aut.test.logic.Player;
+
 import javax.swing.*;
 import javax.swing.border.TitledBorder;
 import java.awt.*;
@@ -26,8 +28,8 @@ public class BattleShipFrame extends JFrame {
     private JComboBox cshi = new JComboBox(ships);
     private JComboBox cdir = new JComboBox(direction);
     private JComboBox aiLevel = new JComboBox(level);
-    private JComboBox shipLayout = new JComboBox(layout);
-    private JComboBox shipColor = new JComboBox(colors);
+    private static JComboBox shipLayout = new JComboBox(layout);
+    private static JComboBox shipColor = new JComboBox(colors);
     private JComboBox playsFirst = new JComboBox(first);
     private JTextField mbar = new JTextField();
     private static int enemy = 1, i, j, length = 5, you = 0, prevcolor = 0, prevFirst = 0, prevLayout = 0, prevLevel = 0, ready = 0, sindex = 0, dindex = 0;
@@ -131,6 +133,13 @@ public class BattleShipFrame extends JFrame {
             return true;
     }
 
+    public static int getTimer() {
+        return timer;
+    }
+
+    public static int getUser() {
+        return user;
+    }
 
     //variable that determines whether or not a carrier has been placed
     public static int getW() {
@@ -293,7 +302,7 @@ public class BattleShipFrame extends JFrame {
                 if (i == 0) {
                     if (j != 0) {
                         //used to display row of numbers
-                        k = new JTextField(Battleship.getCnumbers(j));
+                        k = new JTextField(BattleShipFrame.getCnumbers(j));
                         k.setEditable(false);
                         k.setHorizontalAlignment((int) JFrame.CENTER_ALIGNMENT);
                     } else {
@@ -303,7 +312,7 @@ public class BattleShipFrame extends JFrame {
                     }
                     players[n].getMyBoard().add(k);
                 } else if (j == 0) {
-                    k = new JTextField(Battleship.getCletters(i));
+                    k = new JTextField(BattleShipFrame.getCletters(i));
                     k.setEditable(false);
                     k.setHorizontalAlignment((int) JFrame.CENTER_ALIGNMENT);
                     players[n].getMyBoard().add(k);
@@ -336,7 +345,7 @@ public class BattleShipFrame extends JFrame {
                 }
                 if (i == 0) {
                     if (j != 0) {
-                        k = new JTextField(Battleship.getCnumbers(j));
+                        k = new JTextField(BattleShipFrame.getCnumbers(j));
                         k.setEditable(false);
                         k.setHorizontalAlignment((int) JFrame.CENTER_ALIGNMENT);
                     } else {
@@ -345,7 +354,7 @@ public class BattleShipFrame extends JFrame {
                     }
                     players[u].getGBoard().add(k);
                 } else if (j == 0) {
-                    k = new JTextField(Battleship.getCletters(i));
+                    k = new JTextField(BattleShipFrame.getCletters(i));
                     k.setEditable(false);
                     k.setHorizontalAlignment((int) JFrame.CENTER_ALIGNMENT);
                     players[u].getGBoard().add(k);
@@ -815,8 +824,8 @@ public class BattleShipFrame extends JFrame {
             }
         }
     }
-    public static BattleshipClient getClient()
-    {
+
+    public static BattleshipClient getClient() {
         return me;
     }
 

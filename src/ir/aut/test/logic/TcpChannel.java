@@ -1,6 +1,7 @@
 package ir.aut.test.logic;
 
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.Socket;
@@ -10,10 +11,12 @@ public class TcpChannel {
     private Socket mSocket;
     private OutputStream mOutputStream;
     private InputStream mInputStream;
+    private final byte[] msgSize;
 
     public TcpChannel(SocketAddress socketAddress, int timeout) {
 
     }
+
 
     public TcpChannel(Socket socket, int timeout) {
 
@@ -35,4 +38,15 @@ public class TcpChannel {
 
     }
 
+    public void disconnect() {
+
+    }
+
+    public void sendMessage(byte[] msg) throws IOException {
+
+    }
+
+    public void replyMessage(byte[] msg) {
+
+    }
 }
